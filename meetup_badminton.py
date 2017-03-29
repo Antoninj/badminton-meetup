@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # Author : Antonin Jousson
-# This script takes care of making a rsvp in the badminton meetup group for the weekly events I'm intersted in.
+# This script takes care of making a rsvp in the badminton meetup group for the weekly events I'm interested in.
 
 import argparse
 import requests
