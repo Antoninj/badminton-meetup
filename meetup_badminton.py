@@ -51,7 +51,8 @@ def make_rsvp(event_id,api_key,rsvp_response,guest_nbr):
 
 if __name__=="__main__":
     
-    # Load configuration file 
+    # Load configuration file
+    # IMPORTANT : enter the right name for your configuration file
     with open("config.json") as cfg:
         config = json.load(cfg)
 
