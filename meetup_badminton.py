@@ -10,6 +10,7 @@
 import argparse
 import requests
 import datetime
+import json
 from twilio.rest import Client
 
 # Function to get the event ids for a specific day of the week
@@ -71,8 +72,6 @@ if __name__=="__main__":
     parser.add_argument("-d","--day", help="Day of the week you want to register for the event(s) (sunday by default)", type = int, choices=(0,1,2,3,4,5,6) , default = 6)
     parser.add_argument("-r","--rsvp", help = "RSVP status (yes by default) " , type = str, choices = ("yes" , "no") , default  = "yes")
     parser.add_argument("-g","--guest", help = "Add a plus one (0 by default) " , type = str, choices = ("0","1") , default  = 0)
-
-    # optional arguments
     parser.add_argument("-m","--mode",nargs='?', help="Run mode of script : choose 0 to enable sms confirmation (1 by default)", type = int, choices=(0,1) , default = 1)
 
     # Parse command line arguments
