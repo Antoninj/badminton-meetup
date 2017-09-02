@@ -48,18 +48,19 @@ def make_rsvp(event_id,api_key,rsvp_response,guest_nbr):
 
 if __name__=="__main__":
     
-    # Retrieve API key from text file
-    with open("meetup_api_key.txt","r") as file_1:
-        api_key = file_1.read()
+    # Load configuration file 
+    with open("config.json") as cfg:
+        config = json.load(cfg)
 
-    # Your Account SID from twilio.com/console
-    with open("account_sid.txt","r") as file_2:
-        account_sid = file_2.read()
+    # Meetup API key
+    api_key = config['meetup_api_key']
 
-    # Your Auth Token from twilio.com/console
-    with open("twilio_token_key.txt","r") as file_3:
-        auth_token  = file_3.read()
-        
+    # TWILIO account sid
+    account_sid = config['twilio_account_sid']
+
+    # TWILIO Authentication token
+    auth_token = config['twilio_token_key']
+
     # Create twilio client to send confirmation sms
     client = Client(account_sid, auth_token)
 
