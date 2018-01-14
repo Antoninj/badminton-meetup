@@ -2,20 +2,21 @@
 
 Python script to automate the weekly registration to the brussels badminton meetups. Make sure you have at least python 3 to use the script.
 
-## Setting up 
+## Setting up
 
-First, you need to get your personal meetup API and TWILIO credentials. The TWILIO credentials are optional and needed only if you wish to use the sms confirmation feature.
+First, you need to get your personal meetup API and TWILIO credentials. The TWILIO credentials are optional and only needed if you want to use the sms confirmation feature.
 
 1. [Meetup API](https://secure.meetup.com/meetup_api/key/)
 2. [Twilio API](https://www.twilio.com/console)
 
 Once this is done, update the JSON configuration file with your personal information.
 
-## Automation 
+
+##  Automation
 
 ### Unix systems
 
-* Open the terminal	
+* Open the terminal
 * Edit the crontab using the following command:
 
 ```bash
